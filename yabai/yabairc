@@ -18,8 +18,16 @@ yabai -m config mouse_follows_focus on
 yabai -m mouse_drop_action swap
 
 # disable specific apps
+# mac apps
 yabai -m rule --add app="^System Preferences$" manage=off
 yabai -m rule --add app="^Calculator$" manage=off
 yabai -m rule --add app="^Messages$" manage=off
 yabai -m rule --add app="^Finder$" manage=off
+yabai -m rule --add app="^App Store$" manage=off
+yabai -m rule --add app="^Preview$" manage=off
+yabai -m rule --add app="^Stickies$" manage=off
+yabai -m rule --add app="^Maps$" manage=off
+yabai -m rule --add app="^Photos$" manage=off
+# 3rd party apps
 yabai -m rule --add app="^Slack$" manage=off
+yabai -m rule --add app="^Spotify$" manage=off

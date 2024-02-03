@@ -17,7 +17,7 @@ ctrl + shift - y : yabai -m space --mirror y-axis
 ctrl + shift - x : yabai -m space --mirror x-axis
 
 # toggle window float
-ctrl + shift - t : yabai -m window --toggle float --grid 4:4:1:1:2:2
+ctrl + shift - d : yabai -m window --toggle float --grid 4:4:1:1:2:2
 
 # maximize a window
 ctrl + shift - m : yabai -m window --toggle zoom-fullscreen
@@ -51,4 +51,4 @@ ctrl + alt - 7 : yabai -m window --space 7;
 # stop/start/restart yabai
 ctrl + alt - q : yabai --stop-service
 ctrl + alt - s : yabai --start-service
-ctrl + alt - r : yabai --restart-service
+ctrl + alt - r : skhd --restart-service
