@@ -5,11 +5,11 @@ yabai -m config layout bsp
 yabai -m config window_placement second_child
 
 # padding set to 12px
-yabai -m config top_padding 12
-yabai -m config bottom_padding 12
-yabai -m config left_padding 12
-yabai -m config right_padding 12
-yabai -m config window_gap 12
+yabai -m config top_padding 10
+yabai -m config bottom_padding 10
+yabai -m config left_padding 10
+yabai -m config right_padding 10
+yabai -m config window_gap 10
 
 # center mouse on window with focus
 yabai -m config mouse_follows_focus on
@@ -19,15 +19,7 @@ yabai -m mouse_drop_action swap
 
 # disable specific apps
 # mac apps
-yabai -m rule --add app="^System Preferences$" manage=off
-yabai -m rule --add app="^Calculator$" manage=off
-yabai -m rule --add app="^Messages$" manage=off
-yabai -m rule --add app="^Finder$" manage=off
-yabai -m rule --add app="^App Store$" manage=off
-yabai -m rule --add app="^Preview$" manage=off
-yabai -m rule --add app="^Stickies$" manage=off
-yabai -m rule --add app="^Maps$" manage=off
-yabai -m rule --add app="^Photos$" manage=off
+yabai -m rule --add app="^(System Preferences|Calculator|Messages|Finder|App Store|Preview|Stickies|Maps|Photos|Notes)$" manage=off
 # 3rd party apps
 yabai -m rule --add app="^Slack$" manage=off
 yabai -m rule --add app="^Spotify$" manage=off

@@ -14,13 +14,13 @@ ctrl + shift - r : yabai -m space --rotate 270
 ctrl + shift - y : yabai -m space --mirror y-axis
 
 # flip along x-axis
-ctrl + shift - x : yabai -m space --mirror x-axis
+ctrl + shift - m : yabai -m space --mirror x-axis
 
 # toggle window float
 ctrl + shift - d : yabai -m window --toggle float --grid 4:4:1:1:2:2
 
 # maximize a window
-ctrl + shift - m : yabai -m window --toggle zoom-fullscreen
+ctrl + shift - x : yabai -m window --toggle zoom-fullscreen
 
 # balance out tree of windows (resize to occupy same area)
 ctrl + shift - e : yabai -m space --balance
