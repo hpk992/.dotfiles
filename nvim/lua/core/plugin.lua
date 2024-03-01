@@ -1,6 +1,6 @@
 require("lazy").setup({
 	-- theme
-	{ "rebelot/kanagawa.nvim", priority = 1000 },
+	{ "rose-pine/neovim", name = "rose-pine", priority = 1000 },
 
 	-- git
 	"tpope/vim-fugitive",
@@ -36,6 +36,7 @@ require("lazy").setup({
 	-- autopairs, autotags
 	{
 		"windwp/nvim-autopairs",
+		event = "InsertEnter",
 		config = true,
 	},
 	"windwp/nvim-ts-autotag",

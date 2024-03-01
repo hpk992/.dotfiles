@@ -1,6 +1,7 @@
-require('kanagawa').setup({
-    transparent = true,
+require("rose-pine").setup({
+	styles = {
+		transparency = false,
+	},
 })
 
-vim.cmd("colorscheme kanagawa")
-
+vim.cmd("colorscheme rose-pine")
