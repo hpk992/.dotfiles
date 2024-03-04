@@ -4,6 +4,9 @@ vim.keymap.set("n", "co", "yiwoconsole.log(<Esc>pa)<Esc>i")
 -- netrw
 vim.keymap.set("n", "<leader>pv", vim.cmd.Ex)
 
+-- clear highlight
+vim.keymap.set("n", "<Esc>", "<cmd>nohlsearch<CR>")
+
 -- move highlighted text
 vim.keymap.set("v", "J", ":m '>+1<CR>gv=gv")
 vim.keymap.set("v", "K", ":m '<-2<CR>gv=gv")

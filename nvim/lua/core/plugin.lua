@@ -36,7 +36,6 @@ require("lazy").setup({
 	-- autopairs, autotags
 	{
 		"windwp/nvim-autopairs",
-		event = "InsertEnter",
 		config = true,
 	},
 	"windwp/nvim-ts-autotag",
@@ -44,18 +43,12 @@ require("lazy").setup({
 	-- comment
 	{
 		"numToStr/Comment.nvim",
-		opts = {
-			-- add any options here
-		},
+		opts = {},
 		lazy = false,
 	},
 	"JoosepAlviste/nvim-ts-context-commentstring",
 
-	-- others
-	"mbbill/undotree",
-	"tpope/vim-surround",
-	"norcalli/nvim-colorizer.lua",
-	"lukas-reineke/indent-blankline.nvim",
+	-- file navigation
 	{
 		"theprimeagen/harpoon",
 		branch = "harpoon2",
@@ -81,7 +74,22 @@ require("lazy").setup({
 			{ "<c-l>", "<cmd><C-U>TmuxNavigateRight<cr>" },
 		},
 	},
+
+	-- others
+	"mbbill/undotree",
+	"tpope/vim-surround",
+	"NvChad/nvim-colorizer.lua",
+	"lukas-reineke/indent-blankline.nvim",
 	"nvim-tree/nvim-web-devicons",
 	"nvim-lualine/lualine.nvim",
 	"mg979/vim-visual-multi",
+	{
+		"folke/which-key.nvim",
+		event = "VeryLazy",
+		init = function()
+			vim.o.timeout = true
+			vim.o.timeoutlen = 300
+		end,
+		opts = {},
+	},
 })

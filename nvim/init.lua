@@ -13,5 +13,6 @@ vim.opt.rtp:prepend(lazypath)
 
 require("core.set")
 require("core.remap")
+require("core.autocmd")
 require("core.plugin")
 require("core.plugin_config")
