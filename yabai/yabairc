@@ -23,3 +23,4 @@ yabai -m rule --add app="^(System Preferences|Calculator|Messages|Finder|App Sto
 # 3rd party apps
 yabai -m rule --add app="^Slack$" manage=off
 yabai -m rule --add app="^Spotify$" manage=off
+yabai -m rule --add app="^Discord$" manage=off
