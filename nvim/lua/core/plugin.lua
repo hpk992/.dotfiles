@@ -1,6 +1,7 @@
 require("lazy").setup({
 	-- theme
-	{ "rose-pine/neovim", name = "rose-pine", priority = 1000 },
+	-- { "rose-pine/neovim", name = "rose-pine", priority = 1000 },
+	"loctvl842/monokai-pro.nvim",
 
 	-- git
 	"tpope/vim-fugitive",

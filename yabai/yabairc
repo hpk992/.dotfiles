@@ -19,8 +19,9 @@ yabai -m mouse_drop_action swap
 
 # disable specific apps
 # mac apps
-yabai -m rule --add app="^(System Preferences|Calculator|Messages|Finder|App Store|Preview|Stickies|Maps|Photos|Notes)$" manage=off
+yabai -m rule --add app="^(System Preferences|Calculator|Messages|Finder|App Store|Preview|Stickies|Maps|Photos|Notes|Terminal|Activity Monitor)$" manage=off
 # 3rd party apps
 yabai -m rule --add app="^Slack$" manage=off
 yabai -m rule --add app="^Spotify$" manage=off
 yabai -m rule --add app="^Discord$" manage=off
+yabai -m rule --add app="^VLC$" manage=off
