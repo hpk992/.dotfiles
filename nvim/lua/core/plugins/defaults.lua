@@ -3,6 +3,7 @@ return {
 	"windwp/nvim-ts-autotag",
 	"tpope/vim-surround",
 	"mg979/vim-visual-multi",
+	"JoosepAlviste/nvim-ts-context-commentstring",
 
 	{
 		"NvChad/nvim-colorizer.lua",
