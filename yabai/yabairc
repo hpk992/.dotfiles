@@ -12,7 +12,7 @@ yabai -m config right_padding 10
 yabai -m config window_gap 10
 
 # center mouse on window with focus
-yabai -m config mouse_follows_focus on
+yabai -m config mouse_follows_focus off
 
 # when window is dropped in center of another window, swap them (on edges it will split it)
 yabai -m mouse_drop_action swap
@@ -25,3 +25,5 @@ yabai -m rule --add app="^Slack$" manage=off
 yabai -m rule --add app="^Spotify$" manage=off
 yabai -m rule --add app="^Discord$" manage=off
 yabai -m rule --add app="^VLC$" manage=off
+yabai -m rule --add app="^MongoDB Compass$" manage=off
+yabai -m rule --add app="^Postman$" manage=off
