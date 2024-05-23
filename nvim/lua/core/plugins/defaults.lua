@@ -3,19 +3,19 @@ return {
 
 	"tpope/vim-surround",
 
-    {
-        "NvChad/nvim-colorizer.lua", 
-        config = function()
-            require('colorizer').setup()
-        end
-    },
+	{
+		"NvChad/nvim-colorizer.lua",
+		config = function()
+			require("colorizer").setup()
+		end,
+	},
 
-    {
-        "nvim-tree/nvim-web-devicons",
-        config = function()
-            require("nvim-web-devicons").setup()
-        end
-    },
+	{
+		"nvim-tree/nvim-web-devicons",
+		config = function()
+			require("nvim-web-devicons").setup()
+		end,
+	},
 
 	{
 		"windwp/nvim-autopairs",
@@ -41,11 +41,10 @@ return {
 		},
 	},
 
-    {
-        "nvim-treesitter/nvim-treesitter-context",
-        config = function()
-            require("treesitter-context")
-        end
-    },
-    
+	{
+		"nvim-treesitter/nvim-treesitter-context",
+		config = function()
+			require("treesitter-context")
+		end,
+	},
 }
