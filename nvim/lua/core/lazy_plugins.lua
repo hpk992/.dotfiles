@@ -12,22 +12,6 @@ end
 vim.opt.rtp:prepend(lazypath)
 
 require("lazy").setup({
-    spec = "core.plugins", 
-    change_detection = {notify = false}
+	spec = "core.plugins",
+	change_detection = { notify = false },
 })
-
---[[
-require("lazy").setup({
-	-- others
-	"mg979/vim-visual-multi",
-	{
-		"folke/which-key.nvim",
-		event = "VeryLazy",
-		init = function()
-			vim.o.timeout = true
-			vim.o.timeoutlen = 300
-		end,
-		opts = {},
-	},
-})
---]]

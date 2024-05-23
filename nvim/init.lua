@@ -14,27 +14,32 @@ vim.api.nvim_create_autocmd("TextYankPost", {
 vim.api.nvim_create_autocmd("LspAttach", {
 	group = vim.api.nvim_create_augroup("UserLspConfig", { clear = true }),
 	callback = function(e)
-		local opts = { buffer = e.buf }
 		vim.keymap.set("n", "K", function()
 			vim.lsp.buf.hover()
-		end, opts)
+		end, { buffer = e.buf })
+
 		vim.keymap.set("n", "<leader>vd", function()
 			vim.diagnostic.open_float()
-		end, opts)
+		end, { desc = "View [D]iagnostic", buffer = e.buf })
+
 		vim.keymap.set("n", "]d", function()
 			vim.diagnostic.goto_next()
-		end, opts)
+		end, { desc = "Go next [D]iagnostic message", buffer = e.buf })
+
 		vim.keymap.set("n", "[d", function()
 			vim.diagnostic.goto_prev()
-		end, opts)
+		end, { desc = "Go prev [D]iagnostic message", buffer = e.buf })
+
 		vim.keymap.set("n", "<leader>vca", function()
 			vim.lsp.buf.code_action()
-		end, opts)
+		end, { desc = "Code action", buffer = e.buf })
+
 		vim.keymap.set("n", "<leader>vrn", function()
 			vim.lsp.buf.rename()
-		end, opts)
+		end, { desc = "Rename variable", buffer = e.buf })
+
 		vim.keymap.set("i", "<C-h>", function()
 			vim.lsp.buf.signature_help()
-		end, opts)
+		end, { buffer = e.buf })
 	end,
 })

@@ -1,16 +1,16 @@
 return {
-    "numToStr/Comment.nvim",
+	"numToStr/Comment.nvim",
 	"JoosepAlviste/nvim-ts-context-commentstring",
 
-    lazy = false,
+	lazy = false,
 
-    config = function()
-        require("ts_context_commentstring").setup({
-            enable_autocmd = false,
-        })
+	config = function()
+		require("Comment").setup({
+			pre_hook = require("ts_context_commentstring.integrations.comment_nvim").create_pre_hook(),
+		})
 
-        require("Comment").setup({
-            pre_hook = require("ts_context_commentstring.integrations.comment_nvim").create_pre_hook(),
-        })
-    end
+		require("ts_context_commentstring").setup({
+			enable_autocmd = false,
+		})
+	end,
 }

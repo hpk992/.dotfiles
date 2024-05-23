@@ -1,7 +1,8 @@
 return {
 	"nvim-lua/plenary.nvim",
-
+	"windwp/nvim-ts-autotag",
 	"tpope/vim-surround",
+	"mg979/vim-visual-multi",
 
 	{
 		"NvChad/nvim-colorizer.lua",
@@ -21,8 +22,6 @@ return {
 		"windwp/nvim-autopairs",
 		config = true,
 	},
-
-	"windwp/nvim-ts-autotag",
 
 	{
 		"christoomey/vim-tmux-navigator",
@@ -46,5 +45,15 @@ return {
 		config = function()
 			require("treesitter-context")
 		end,
+	},
+
+	{
+		"folke/which-key.nvim",
+		event = "VeryLazy",
+		init = function()
+			vim.o.timeout = true
+			vim.o.timeoutlen = 300
+		end,
+		opts = {},
 	},
 }

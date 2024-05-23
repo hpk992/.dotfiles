@@ -2,7 +2,7 @@
 vim.keymap.set("n", "co", "yiwoconsole.log(<Esc>pa)<Esc>i")
 
 -- netrw
-vim.keymap.set("n", "<leader>pv", vim.cmd.Ex)
+vim.keymap.set("n", "<leader>pv", vim.cmd.Ex, { desc = "Back to netrw" })
 
 -- clear highlight
 vim.keymap.set("n", "<Esc>", "<cmd>nohlsearch<CR>")
