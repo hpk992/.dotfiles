@@ -1,9 +1,43 @@
 #!/bin/zsh
 
-ln -s "$HOME/.dotfiles/.gitconfig" "$HOME/.gitconfig"
-ln -s "$HOME/.dotfiles/.zshrc" "$HOME/.zshrc"
-ln -s "$HOME/.dotfiles/.tmux/.tmux.conf" "$HOME/.tmux.conf"
-ln -s "$HOME/.dotfiles/.tmux" "$HOME/.tmux"
-ln -s "$HOME/.dotfiles/nvim" "$HOME/.config/nvim"
-ln -s "$HOME/.dotfiles/skhd" "$HOME/.config/skhd"
-ln -s "$HOME/.dotfiles/yabai" "$HOME/.config/yabai"
+DOTFILES_DIR="$HOME/.dotfiles"
+DEST_CONFIG_DIR="$HOME/.config"
+
+FILES=("nvim" "skhd" "yabai" ".tmux" ".gitconfig" ".zshrc" ".tmux/.tmux.conf")
+
+pushd "$HOME" > /dev/null
+
+for file in "${FILES[@]}"; do
+    src="$DOTFILES_DIR/$file"
+    dest_config="$DEST_CONFIG_DIR/$file"
+    home="$HOME/$file"
+
+    if [[ "$file" == "nvim" || "$file" == "yabai" || "$file" == 'skhd' ]]; then
+        if [[ ! -L "$dest_config" ]]; then
+            ln -s "$src" "$dest_config" 
+            echo "$file link created"
+        else
+            echo "$file already exist"
+        fi
+
+    elif [[ "$file" == ".tmux/.tmux.conf" ]]; then
+        if [[ ! -L "$HOME/.tmux.conf" ]]; then
+            ln -s "$src" "$HOME/.tmux.conf" 
+            echo "$file link created"
+        else
+            echo "$file already exist"
+        fi
+
+    else
+        if [[ ! -L "$home" ]]; then
+            ln -s "$src" "$home"
+            echo "$file link created"
+        else
+            echo "$file already exist"
+        fi
+
+    fi
+
+done
+
+popd > /dev/null
