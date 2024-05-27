@@ -1,5 +1,6 @@
 # map vim to nvim
 alias vim="nvim"
+alias tmux-new="tmux-sessionizer.sh"
 
 # Initialization code that may require console input (password prompts, [y/n]
 # confirmations, etc.) must go above this block; everything else may go below.
@@ -16,3 +17,6 @@ source $(brew --prefix)/share/powerlevel10k/powerlevel10k.zsh-theme
 # zsh-autosuggestions
 source /usr/local/opt/zsh-autosuggestions/share/zsh-autosuggestions/zsh-autosuggestions.zsh
 bindkey '^ ' autosuggest-accept
+
+# Add ~/bin to PATH
+export PATH="$HOME/bin:$PATH"

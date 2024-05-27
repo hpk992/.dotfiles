@@ -3,7 +3,7 @@
 DOTFILES_DIR="$HOME/.dotfiles"
 DEST_CONFIG_DIR="$HOME/.config"
 
-FILES=("nvim" "skhd" "yabai" ".tmux" ".gitconfig" ".zshrc" ".tmux/.tmux.conf")
+FILES=("nvim" "skhd" "yabai" ".tmux" ".gitconfig" ".zshrc" ".tmux/.tmux.conf" "bin")
 
 pushd "$HOME" > /dev/null
 
