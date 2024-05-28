@@ -1,9 +1,15 @@
 return {
 	"nvim-lua/plenary.nvim",
-	"windwp/nvim-ts-autotag",
 	"tpope/vim-surround",
 	"mg979/vim-visual-multi",
 	"JoosepAlviste/nvim-ts-context-commentstring",
+
+	{
+		"windwp/nvim-ts-autotag",
+		config = function()
+			require("nvim-ts-autotag").setup()
+		end,
+	},
 
 	{
 		"NvChad/nvim-colorizer.lua",

@@ -1,6 +1,6 @@
 # map vim to nvim
 alias vim="nvim"
-alias tmux-new="tmux-sessionizer.sh"
+alias tmuxnew="tmux-sessionizer.sh"
 
 # Initialization code that may require console input (password prompts, [y/n]
 # confirmations, etc.) must go above this block; everything else may go below.
