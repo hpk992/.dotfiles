@@ -3,6 +3,7 @@ return {
 	"tpope/vim-surround",
 	"mg979/vim-visual-multi",
 	"JoosepAlviste/nvim-ts-context-commentstring",
+	"airblade/vim-gitgutter",
 
 	{
 		"windwp/nvim-ts-autotag",
