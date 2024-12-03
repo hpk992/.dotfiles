@@ -1,5 +1,14 @@
 return {
 	{
+		"ellisonleao/gruvbox.nvim",
+		lazy = false,
+		priority = 1000,
+
+		config = function()
+			vim.cmd("colorscheme gruvbox")
+		end,
+	},
+	{
 		"loctvl842/monokai-pro.nvim",
 		lazy = false,
 		priority = 1000,
@@ -49,16 +58,7 @@ return {
 		},
 
 		-- config = function()
-		-- vim.cmd("colorscheme monokai-pro")
+		-- 	vim.cmd("colorscheme monokai-pro-ristretto")
 		-- end,
-	},
-	{
-		"ellisonleao/gruvbox.nvim",
-		lazy = false,
-		priority = 1000,
-
-		config = function()
-			vim.cmd("colorscheme gruvbox")
-		end,
 	},
 }

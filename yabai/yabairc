@@ -27,3 +27,5 @@ yabai -m rule --add app="^Discord$" manage=off
 yabai -m rule --add app="^VLC$" manage=off
 yabai -m rule --add app="^MongoDB Compass$" manage=off
 yabai -m rule --add app="^Postman$" manage=off
+yabai -m rule --add app="^Local$" manage=off
+yabai -m rule --add app="^Microsoft Teams$" manage=off
