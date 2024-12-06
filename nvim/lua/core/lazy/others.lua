@@ -1,7 +1,6 @@
 return {
-	"nvim-lua/plenary.nvim",
 	"tpope/vim-surround",
-	"mg979/vim-visual-multi",
+	-- "mg979/vim-visual-multi",
 	"JoosepAlviste/nvim-ts-context-commentstring",
 	"airblade/vim-gitgutter",
 
@@ -19,12 +18,12 @@ return {
 		end,
 	},
 
-	{
-		"nvim-tree/nvim-web-devicons",
-		config = function()
-			require("nvim-web-devicons").setup()
-		end,
-	},
+	-- {
+	-- 	"nvim-tree/nvim-web-devicons",
+	-- 	config = function()
+	-- 		require("nvim-web-devicons").setup()
+	-- 	end,
+	-- },
 
 	{
 		"windwp/nvim-autopairs",
@@ -48,13 +47,13 @@ return {
 		},
 	},
 
-	{
-		"nvim-treesitter/nvim-treesitter-context",
-		config = function()
-			require("treesitter-context")
-		end,
-	},
-
+	-- {
+	-- 	"nvim-treesitter/nvim-treesitter-context",
+	-- 	config = function()
+	-- 		require("treesitter-context")
+	-- 	end,
+	-- },
+	--
 	{
 		"folke/which-key.nvim",
 		event = "VeryLazy",

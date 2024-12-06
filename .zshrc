@@ -1,4 +1,5 @@
 # map vim to nvim
+alias ta="tmux a"
 alias vim="nvim"
 
 # Initialization code that may require console input (password prompts, [y/n]
@@ -6,7 +7,6 @@ alias vim="nvim"
 if [[ -r "${XDG_CACHE_HOME:-$HOME/.cache}/p10k-instant-prompt-${(%):-%n}.zsh" ]]; then
   source "${XDG_CACHE_HOME:-$HOME/.cache}/p10k-instant-prompt-${(%):-%n}.zsh"
 fi
-
 # Enable Powerlevel10k instant prompt. Should stay close to the top of ~/.zshrc.
 source $(brew --prefix)/share/powerlevel10k/powerlevel10k.zsh-theme
 
@@ -14,13 +14,9 @@ source $(brew --prefix)/share/powerlevel10k/powerlevel10k.zsh-theme
 [[ ! -f ~/.p10k.zsh ]] || source ~/.p10k.zsh
 
 # zsh-autosuggestions
-source /usr/local/opt/zsh-autosuggestions/share/zsh-autosuggestions/zsh-autosuggestions.zsh
+source $(brew --prefix)/share/zsh-autosuggestions/zsh-autosuggestions.zsh
 bindkey '^ ' autosuggest-accept
 
-# Add ~/bin to PATH
+# add ~/bin to PATH
 export PATH="$HOME/bin:$PATH"
 bindkey -s ^f "tmux-sessionizer.sh\n"
-
-export NVM_DIR="$HOME/.nvm"
-[ -s "$NVM_DIR/nvm.sh" ] && \. "$NVM_DIR/nvm.sh"  # This loads nvm
-[ -s "$NVM_DIR/bash_completion" ] && \. "$NVM_DIR/bash_completion"  # This loads nvm bash_completion

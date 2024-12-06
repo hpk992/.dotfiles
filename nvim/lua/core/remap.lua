@@ -1,8 +1,10 @@
+vim.g.mapleader = " "
+
 -- console log
 vim.keymap.set("n", "co", "yiwoconsole.log(<Esc>pa)<Esc>i")
 
 -- netrw
-vim.keymap.set("n", "<leader>pv", vim.cmd.Ex, { desc = "Back to netrw" })
+vim.keymap.set("n", "<leader>pv", vim.cmd.Ex, { desc = "back to netrw" })
 
 -- clear highlight
 vim.keymap.set("n", "<Esc>", "<cmd>nohlsearch<CR>")
@@ -22,15 +24,20 @@ vim.keymap.set("n", "N", "Nzzzv")
 vim.keymap.set("x", "<leader>p", [["_dP]])
 
 -- next greatest remap ever : yank into system clipboard
-vim.keymap.set({ "n", "v" }, "<leader>y", [["+y]])
-vim.keymap.set("n", "<leader>Y", [["+Y]])
+vim.keymap.set({ "n", "v" }, "<leader>y", [["+y]], { desc = "yank to system clipboard" })
+vim.keymap.set("n", "<leader>Y", [["+Y]], { desc = "yank line to system clipboard" })
 
 vim.keymap.set("i", "<C-c>", "<Esc>")
 
 -- quickfix list navigation
 vim.keymap.set("n", "<C-k>", "<cmd>cnext<CR>zz")
 vim.keymap.set("n", "<C-j>", "<cmd>cprev<CR>zz")
-vim.keymap.set("n", "<leader>k", "<cmd>lnext<CR>zz")
-vim.keymap.set("n", "<leader>j", "<cmd>lprev<CR>zz")
+vim.keymap.set("n", "<leader>k", "<cmd>lnext<CR>zz", { desc = "quickfix next" })
+vim.keymap.set("n", "<leader>j", "<cmd>lprev<CR>zz", { desc = "quickfix prev" })
 
-vim.keymap.set("n", "<leader>s", [[:%s/\<<C-r><C-w>\>/<C-r><C-w>/gI<Left><Left><Left>]])
+vim.keymap.set(
+	"n",
+	"<leader>s",
+	[[:%s/\<<C-r><C-w>\>/<C-r><C-w>/gI<Left><Left><Left>]],
+	{ desc = "search and replace word" }
+)
