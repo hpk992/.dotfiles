@@ -22,9 +22,11 @@ vim.opt.incsearch = true
 vim.ignorecase = true
 vim.smartcase = true
 
+vim.opt.nrformats:append('alpha')
+
 vim.opt.termguicolors = true
 
-vim.opt.scrolloff = 8
+vim.opt.scrolloff = 10
 vim.opt.signcolumn = "yes"
 vim.opt.updatetime = 50
 

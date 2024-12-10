@@ -1,6 +1,8 @@
 [window]
 opacity = 0.95
 blur = true
+dimensions.columns = 80
+dimensions.lines = 22
 
 [font]
 normal.family = "MesloLGS NF"
