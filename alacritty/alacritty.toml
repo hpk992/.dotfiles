@@ -7,14 +7,3 @@ dimensions.lines = 22
 [font]
 normal.family = "MesloLGS NF"
 size = 18
-
-[colors.normal]
-black = "0x090618"
-red = "0xc34043"
-green = "0x76946a"
-yellow = "0xc0a36e"
-blue = "0x7e9cd8"
-magenta = "0x957fb8"
-cyan = "0x6a9589"
-white = "0xc8c093"
-

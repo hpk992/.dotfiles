@@ -20,3 +20,6 @@ bindkey '^ ' autosuggest-accept
 # add ~/bin to PATH
 export PATH="$HOME/bin:$PATH"
 bindkey -s ^f "tmux-sessionizer.sh\n"
+
+export PATH="/home/$USER/.fnm:$PATH"
+eval "$(fnm env --use-on-cd --version-file-strategy=recursive)"
